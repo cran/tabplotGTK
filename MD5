@@ -1,9 +1,9 @@
-3ce2437275b8190fb1342836607c2da9 *DESCRIPTION
+fc2b9904e8f87f6dbca450a809d3320f *DESCRIPTION
 14fccdbebfbfc2dae5fc1cc97f42b173 *NAMESPACE
 b659289c836f1e4d9e7460f121dc235d *R/generalFunctions.R
 c4efaf51387d3846761e185d8f94a9c8 *R/isTabplotUsable.R
 fe029a03ef13558373e8da1b374ac5b9 *R/pkg.R
-5f815396d046f1a573965ad8b9a8f7ab *R/tableGUI.R
+4a1248ecd5f67fed1735f44e1d3c4ee2 *R/tableGUI.R
 54097c6ebf6b02d7275de22016b043b4 *R/tableGUI_functions.R
 bf377a361f6964529f2fe9d843457a04 *R/tableGUI_main_handlers.R
 ef4820d8235723abfaefa24229d26ddf *R/tableGUI_main_layout.R

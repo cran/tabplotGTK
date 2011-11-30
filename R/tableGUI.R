@@ -40,7 +40,8 @@ function(dat=NULL, colNames=names(dat), sortCol=1,  decreasing=TRUE, nBins=100, 
 	#####################################
 	## Check arguments
 	#####################################
-	if (is.null(filter)) filter <- ""
+
+    if (is.null(filter)) filter <- ""
     
 	## check datName
 	if (!is.null(dat)) {
@@ -59,7 +60,7 @@ function(dat=NULL, colNames=names(dat), sortCol=1,  decreasing=TRUE, nBins=100, 
 			to <- dat$rows$to
 			
 			filter <- dat$filter
-			if (filter==character(0)) filter <- ""
+			if (length(filter)==0) filter <- ""
 			
 			# colNames
 			colNames <- sapply(dat$columns, FUN=function(x)x$name)
