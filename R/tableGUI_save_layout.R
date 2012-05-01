@@ -10,7 +10,7 @@ tableGUI_save_layout <- function(e) {
 		grad_save <- gradio(c("Save to file", "Save to workspace"), cont=grp1_save)
 		
 		grp2_save <- ggroup(horizontal = TRUE, cont = grp0_save, expand=FALSE)
-		formats <- c("pdf", "eps", "wmf", "png", "jpg", "bmp","tiff")
+		formats <- c("pdf", "eps", "svg", "wmf", "png", "jpg", "bmp","tiff")
 		
 		edt_save <- gedit(text="", cont=grp2_save)
 		lbl1_save <- glabel(".", cont=grp2_save)

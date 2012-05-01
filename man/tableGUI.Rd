@@ -3,9 +3,9 @@
 \title{Start a GUI}
 \usage{
   tableGUI(dat = NULL, colNames = names(dat), sortCol = 1,
-  decreasing = TRUE, nBins = 100, from = 0, to = 100,
-  filter = NULL, scales = "auto", pals = list("Set1",
-  "Set2", "Set3", "Set4"), ...)
+    decreasing = TRUE, nBins = 100, from = 0, to = 100,
+    filter = NULL, scales = "auto",
+    pals = list("Set1", "Set2", "Set3", "Set4"), ...)
 }
 \arguments{
   \item{dat}{either a \link{tabplot-object} or a dataset
@@ -49,8 +49,14 @@
   reproducibility.
 }
 \examples{
-\dontrun{
-  tableGUI()
-}
+# load diamonds dataset from ggplot2
+require(ggplot2)
+data(diamonds)
+
+# start GUI
+
+# Not run:
+tableGUI()
+# End(Not run)
 }
 

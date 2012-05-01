@@ -1,11 +1,13 @@
 \docType{package}
 \name{tabplotGTK-package}
+\alias{tabplotGTK}
 \alias{tabplotGTK-package}
 \title{A graphical user interface for the tabplot package}
 \description{
   \tabular{ll}{ Package: \tab tabplotGTK\cr Type: \tab
-  Package\cr Version: \tab 0.5\cr Date: \tab 2011-10-21\cr
-  License: \tab GPL-3\cr LazyLoad: \tab yes\cr }
+  Package\cr Version: \tab 0.5-2\cr Date: \tab
+  2012-05-01\cr License: \tab GPL-3\cr LazyLoad: \tab
+  yes\cr }
 }
 \details{
   This package offers a GTK graphical user interface for

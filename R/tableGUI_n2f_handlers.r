@@ -87,11 +87,24 @@ tableGUI_n2f_handlers <- function(e) {
 				cmb2[] <- 2:8
 				if (tmp != "auto") svalue(cmb2) <- tmp else svalue(cmb2) <- 5
 				enabled(lay2) <- TRUE
-				for (i in 1:3) {
-					enabled(brksTab[[1]][[i]]) <- TRUE
-					enabled(brksTab[[2]][[i]]) <- TRUE
-					enabled(brksTab[[3]][[i]]) <- FALSE
+				
+				n <- as.numeric(svalue(cmb2))
+				i <- 1
+				j <- 1
+				fill <- TRUE
+				for (k in 1:9) {
+					if (fill) {
+						enabled(brksTab[[i]][[j]]) <- TRUE
+						if (k==(n+1)) fill <- FALSE
+					} else {
+						svalue(brksTab[[i]][[j]]) <- ""
+						enabled(brksTab[[i]][[j]]) <- FALSE
+						
+					}
+					i <- i+1
+					if (i==4) {i<-1; j<-j+1}
 				}
+				
 				enabled(rad) <- FALSE
 				enabled(cmb2) <- TRUE
 			} else if (svalue(h$obj)=="pretty") {
