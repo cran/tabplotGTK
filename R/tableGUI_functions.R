@@ -389,8 +389,8 @@ tableGUI_run <- function(vars, gui_from, gui_to, gui_nBins, gui_filter, e) {
 	# filter
 	gui_filter <- gsub("\u00c2.", "'", gui_filter)
 	gui_filter2 <- gsub("\"", "\\\\\"", gui_filter)
-	filterPrint <- ifelse(gui_filter=="", "", paste(", filter=\"",gui_filter2,"\"", sep=""))
-	if (gui_filter=="") gui_filter3 <- NULL else gui_filter3 <- gui_filter
+	filterPrint <- ifelse(gui_filter=="", "", paste("subset=",gui_filter2, ", ", sep=""))
+	if (gui_filter=="") gui_filter3 <- TRUE else gui_filter3 <- gui_filter
 	
 	# palettes	
 	isCat <- varTable$Palette!=""
@@ -420,23 +420,22 @@ tableGUI_run <- function(vars, gui_from, gui_to, gui_nBins, gui_filter, e) {
 	if (all(scales==scales[1])) scales <- scales[1]
 	scalesPrint <- createVector(scales, quotes=TRUE)
 
-	
 	if (isUsable) {
 		firstSortColID <- match(vars[sortCol[1]], sapply(tab$columns, function(col)col$name))
 		flip <- (tab$columns[[firstSortColID]]$sort=="decreasing") != decreasing[1]
-		tab <- tableChange(tab, colNames=vars, flip=flip, pals=palettes)
+		tab <- tableChange(tab, select_string=vars, flip=flip, pals=palettes)
 	} else {
 		if (tableGUI_getCurrentDFclass(e)=="data.table") {
-			tab <- tableplot(get(currentDFname, envir=.GlobalEnv)[, vars, with=FALSE], sortCol=sortCol, decreasing=decreasing, nBins=nBins, from=gui_from, to=gui_to, filter=gui_filter3, scales=scales, pals=palettes, plot=FALSE)
+			tab <- tableplot(get(currentDFname, envir=.GlobalEnv)[, vars, with=FALSE], sortCol=sortCol, decreasing=decreasing, nBins=nBins, from=gui_from, to=gui_to, subset_string=gui_filter3, scales=scales, pals=palettes, plot=FALSE)
 		} else 
 		{
-			tab <- tableplot(get(currentDFname, envir=.GlobalEnv)[vars], sortCol=sortCol, decreasing=decreasing, nBins=nBins, from=gui_from, to=gui_to, filter=gui_filter3, scales=scales, pals=palettes, plot=FALSE)
+			tab <- tableplot(get(currentDFname, envir=.GlobalEnv)[vars], sortCol=sortCol, decreasing=decreasing, nBins=nBins, from=gui_from, to=gui_to, subset_string=gui_filter3, scales=scales, pals=palettes, plot=FALSE)
 		}
 	}
 
 	
 	## print commandline to reproduce tableplot
-	cat("tableplot(", currentDFname, ", colNames=c(", paste("\"",paste(vars,collapse="\",\""),"\"", sep=""), "), sortCol=", sortColPrint, ", decreasing=", decreasingPrint, ", nBins=", nBins, ", from=", gui_from, ", to=", gui_to, filterPrint, ", scales=", scalesPrint, ", pals=", palPrint, ")\n", sep="")
+	cat("tableplot(", currentDFname, ", select=c(", paste(vars,collapse=", "), "), ", filterPrint, "sortCol=", sortColPrint, ", decreasing=", decreasingPrint, ", nBins=", nBins, ", from=", gui_from, ", to=", gui_to, ", scales=", scalesPrint, ", pals=", palPrint, ")\n", sep="")
 
 	
 	assign("tab", tab, envir=e)	

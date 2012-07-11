@@ -1,3 +1,6 @@
+version 0.6
+- added support for tabplot version 0.12
+
 version 0.5-2
 - added save-to-svg option
 - fixed bug in categorical-to-numeric breaks

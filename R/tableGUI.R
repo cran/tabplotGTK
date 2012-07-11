@@ -12,6 +12,7 @@
 #' \item configure the tableplot: determine the sorted variable, the scales, palettes, number of bins, etc.
 #' \item create the tableplot, and if needed, save it}
 #' Actions, such as generating and saving tableplots, are printed in the console for reproducibility.
+#' Note regarding RStudio: after pressing the Run button, press enter in the console to show the tableplot.
 #'	
 #' @aliases tableGUI
 #' @param dat either a \link{tabplot-object} or a dataset (see \code{\link{tableplot}})

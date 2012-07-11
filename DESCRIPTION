@@ -7,10 +7,10 @@ LazyLoad: yes
 Author: Martijn Tennekes and Edwin de Jonge
 Description: This package offers a GTK graphical user interface for the
         creation of tableplots with the tabplot package.
-Version: 0.5-2
+Version: 0.6
 URL: http://code.google.com/p/tabplotGTK/
-Date: 2012-05-01
-Depends: tabplot (>= 0.11-2), gWidgets, gWidgetsRGtk2, classInt
+Date: 2012-07-11
+Depends: tabplot (>= 0.12), gWidgets, gWidgetsRGtk2, classInt
 Suggests: ff (>= 2.2-0), ggplot2
 Collate: 'generalFunctions.R' 'isTabplotUsable.R' 'pkg.R' 'tableGUI.R'
         'tableGUI_functions.R' 'tableGUI_main_handlers.R'
@@ -19,6 +19,6 @@ Collate: 'generalFunctions.R' 'isTabplotUsable.R' 'pkg.R' 'tableGUI.R'
         'tableGUI_pal_handlers.R' 'tableGUI_pal_layout.r'
         'tableGUI_save_functions.R' 'tableGUI_save_handlers.R'
         'tableGUI_save_layout.R' 'tableViewport.R'
-Packaged: 2012-05-02 12:15:55 UTC; mtes
+Packaged: 2012-07-11 15:26:30 UTC; von-tijn
 Repository: CRAN
-Date/Publication: 2012-05-02 12:59:40
+Date/Publication: 2012-07-12 09:23:06

@@ -1,11 +1,11 @@
-0bcf936e59e5e18522815f89bbad6107 *DESCRIPTION
+dd7cbfdfe65b6a9548f2e34ffdda6ef3 *DESCRIPTION
 14fccdbebfbfc2dae5fc1cc97f42b173 *NAMESPACE
-2b9c594765822f56035be22ed501e939 *NEWS
+ccb07369f2e1db273f9d051bba669b08 *NEWS
 b659289c836f1e4d9e7460f121dc235d *R/generalFunctions.R
-c4efaf51387d3846761e185d8f94a9c8 *R/isTabplotUsable.R
-780b637e095adfa3a54c07b68555ecf5 *R/pkg.R
-4a1248ecd5f67fed1735f44e1d3c4ee2 *R/tableGUI.R
-54097c6ebf6b02d7275de22016b043b4 *R/tableGUI_functions.R
+a4bc4f1c25d680508c94ae52476bae19 *R/isTabplotUsable.R
+09ffc3391f2dc51395622b85ddf971d9 *R/pkg.R
+e7efe3e64248b911bb255942050fa028 *R/tableGUI.R
+480a502d62073d97db2b2624680077a3 *R/tableGUI_functions.R
 bf377a361f6964529f2fe9d843457a04 *R/tableGUI_main_handlers.R
 ef4820d8235723abfaefa24229d26ddf *R/tableGUI_main_layout.R
 8f8292f65b062cf91aaa93bbbd7a5a21 *R/tableGUI_n2f_handlers.r
@@ -19,5 +19,5 @@ d5aa39e35a167c6654c24233a13f6bf3 *R/tableGUI_save_functions.R
 c9eb6bf515fca58703dcc34b12a36f5a *R/tableViewport.R
 11327785998f88d37065d0bd87539175 *demo/00Index
 38ab7735eb107c4d9be0673ee87af8e0 *demo/tableGUI.R
-9a02efa72e08a547dcfa794d8e07330a *man/tableGUI.Rd
-b99ac43398af5e4eb1d095961aaecc04 *man/tabplotGTK-package.Rd
+263a4e53e89dd9cb27f6a944e27c9424 *man/tableGUI.Rd
+2ccdd9d8817450e13bfff02ecd4b8e59 *man/tabplotGTK-package.Rd

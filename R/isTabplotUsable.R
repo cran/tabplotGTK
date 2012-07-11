@@ -1,5 +1,5 @@
 ## function that checks whether first argument, the tabplot object "tab", can be reused with the specifications according to the other arguments. Reusing a tabplot object is done by the function changeTabplot
-isTabplotUsable <- function(tab, colNames, sortCol, decreasing, scales, nBins, from, to, filter) {
+isTabplotUsable <- function(tab, select_string, sortCol, decreasing, scales, nBins, from, to, filter) {
 	## check number of row bins
 	if (nBins!=tab$nBins) return(FALSE)
 
@@ -15,7 +15,7 @@ isTabplotUsable <- function(tab, colNames, sortCol, decreasing, scales, nBins, f
 
 	
 	tabColNames <- sapply(tab$columns, function(col)col$name)
-	colID <- match(colNames, tabColNames)
+	colID <- match(select_string, tabColNames)
 	tabNumberID <- colID[which(tab$isNumber)]
 	
 	## check is all column names are in tab
@@ -34,7 +34,7 @@ isTabplotUsable <- function(tab, colNames, sortCol, decreasing, scales, nBins, f
 	}
 	
 	
-	sortColNames <- colNames[sortCol]
+	sortColNames <- select_string[sortCol]
 
 	tabSort <- sapply(1:length(tab$columns), function(id) tab$columns[[id]]$sort)
 	tabSortCols <- which(tabSort!="")
